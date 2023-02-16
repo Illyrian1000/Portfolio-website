@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #64ffda;
+  --background-color: #0a192f;
+  --font-color: #ccd6f6;
+}
+body {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  background-color: var(--background-color);
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  color: var(--font-color);
+  height: 100px;
+  width: 100%;
+  align-items: center;
+}
+
+.logo-image {
+  position: absolute;
+  width: 20px;
+  left: 60px;
+  top: 35px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+  border-bottom: 1px solid var(--background-color);
+  transition: color 0.5s ease;
+  transition: border-bottom 0.5s ease;
+}
+
+button {
+  margin-right: 40px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+  padding: 6px 10px;
+}
+
+.main-container {
+  width: 70%;
+  margin: auto;
+}
+.top-p {
+  color: var(--primary-color);
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 80px;
+  color: #8892b0;
+  font-family: Calibre, Inter, "San Francisco";
+}
+
+.my-name {
+  color: #ccd6f6;
+}
+.main-p {
+  color: #8892b0;
+  width: 50%;
+  margin-top: 30px;
+  line-height: 1.8;
+}
+
+.top-link:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+  border-bottom: 1px solid var(--primary-color);
+}
