@@ -21,13 +21,15 @@ nav {
   height: 100px;
   width: 100%;
   align-items: center;
+  margin-bottom: 30px;
 }
 
-.logo-image {
+#logo {
   position: absolute;
   width: 20px;
-  left: 60px;
+  left: 100px;
   top: 35px;
+  color: var(--primary-color);
 }
 ul {
   list-style: none;
@@ -40,16 +42,25 @@ li {
   padding: 10px;
   border-bottom: 1px solid var(--background-color);
   transition: color 0.5s ease;
-  transition: border-bottom 0.5s ease;
 }
 
 button {
-  margin-right: 40px;
+  margin-right: 100px;
   border: 1px solid var(--primary-color);
   background-color: var(--background-color);
   color: var(--primary-color);
   border-radius: 5px;
   padding: 6px 10px;
+  transition: color 0.5s ease;
+  transition: background-color 0.5s ease;
+  width: 74px;
+}
+
+button:hover {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .main-container {
