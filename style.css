@@ -42,6 +42,11 @@ li {
   padding: 10px;
   border-bottom: 1px solid var(--background-color);
   transition: color 0.5s ease;
+  transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+  transform: translateY(-5px);
 }
 
 button {
@@ -64,7 +69,7 @@ button:hover {
 }
 
 .main-container {
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
 .top-p {
