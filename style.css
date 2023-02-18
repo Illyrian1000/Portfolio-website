@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -13,7 +14,6 @@ body {
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   background-color: var(--background-color);
 }
-
 nav {
   display: flex;
   justify-content: end;
@@ -105,6 +105,11 @@ h1 {
   line-height: 1.8;
 }
 
+p,
+h1::selection {
+  color: var(--primary-color);
+}
+
 .top-link:hover {
   color: var(--primary-color);
   cursor: pointer;
@@ -131,14 +136,17 @@ a:active {
 }
 
 .icons-container {
-  position: absolute;
-  display: inline-block;
-  top: 80%;
-  left: 20px;
-  position: sticky;
+  position: fixed;
+  bottom: 20px;
+  left: 60px;
 }
 
 .icons-container img {
   width: 25px;
   margin: 10px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icons-container img:hover {
+  transform: translateY(-3px);
 }
