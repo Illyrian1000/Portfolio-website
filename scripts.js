@@ -3,18 +3,35 @@ const logo = document.querySelector(`#logo`);
 const nameLetters = ["I", "L", "I", "J", "A", "N"];
 const surnameLetters = ["P", "R", "E", "V", "A", "Z", "I"];
 
-const alphabet = [];
+let logoArr = [];
+let logoStr = "";
 
-for (let i = 0; i < 26; i++) {
-  alphabet.push(String.fromCharCode(65 + i)); // uppercase letters A-Z
-  alphabet.push(String.fromCharCode(97 + i)); // lowercase letters a-z
+function addAndRemove(name, surname) {
+  let originalNameArray = name.slice();
+  let originalSurnameArray = surname.slice();
+  let str = "";
+  let count = 2;
+
+  const intervalId = setInterval(() => {
+    if (name.length > 0) {
+      str += name.shift();
+      logo.textContent = str;
+    } else if (str.length > 0) {
+      str = str.slice(0, str.length - 1);
+      logo.textContent = str;
+    } else {
+      name = originalNameArray.slice();
+      count++;
+    }
+  }, 200);
 }
 
-for (let i = 0; i < 10; i++) {
-  alphabet.push(String(i)); // numbers 0-9
-}
+addAndRemove(nameLetters, surnameLetters);
 
-console.log(alphabet);
+//
+//
+//
+//
 
 // const logoLetterChange = function () {
 //   let i = 0;
