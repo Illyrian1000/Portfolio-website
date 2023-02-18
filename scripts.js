@@ -1,16 +1,13 @@
 const logo = document.querySelector(`#logo`);
 
-const nameLetters = ["I", "L", "I", "J", "A", "N"];
+const nameLetters = ["I", "L", "I", "R", "J", "A", "N"];
 const surnameLetters = ["P", "R", "E", "V", "A", "Z", "I"];
 
-let logoArr = [];
-let logoStr = "";
+const random = Math.floor(Math.random() * 2);
 
-function addAndRemove(name, surname) {
+function addAndRemove(name) {
   let originalNameArray = name.slice();
-  let originalSurnameArray = surname.slice();
   let str = "";
-  let count = 2;
 
   const intervalId = setInterval(() => {
     if (name.length > 0) {
@@ -21,12 +18,11 @@ function addAndRemove(name, surname) {
       logo.textContent = str;
     } else {
       name = originalNameArray.slice();
-      count++;
     }
   }, 200);
 }
 
-addAndRemove(nameLetters, surnameLetters);
+addAndRemove(nameLetters);
 
 //
 //
