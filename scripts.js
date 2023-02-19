@@ -24,6 +24,43 @@ function addAndRemove(name) {
 
 addAndRemove(nameLetters);
 
+const sisal = document.getElementById("sisal");
+const publer = document.getElementById("publer");
+const fiveca = document.getElementById("fiveca");
+
+const sisalDex = document.getElementById("sisal-description");
+const publerDex = document.getElementById("publer-description");
+const fivecaDex = document.getElementById("fiveca-description");
+
+sisal.addEventListener("click", function () {
+  sisal.classList.add("active");
+  sisalDex.classList.remove("hide");
+
+  publer.classList.remove("active");
+  publerDex.classList.add("hide");
+  fiveca.classList.remove("active");
+  fivecaDex.classList.add("hide");
+});
+
+publer.addEventListener("click", function () {
+  publer.classList.add("active");
+  publerDex.classList.remove("hide");
+
+  sisal.classList.remove("active");
+  sisalDex.classList.add("hide");
+  fiveca.classList.remove("active");
+  fivecaDex.classList.add("hide");
+});
+
+fiveca.addEventListener("click", function () {
+  fiveca.classList.add("active");
+  fivecaDex.classList.remove("hide");
+
+  sisal.classList.remove("active");
+  sisalDex.classList.add("hide");
+  publer.classList.remove("active");
+  publerDex.classList.add("hide");
+});
 //
 //
 //
