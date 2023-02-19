@@ -32,13 +32,13 @@ nav {
   top: 35px;
   color: var(--primary-color);
 }
-ul {
+nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
-li {
+nav li {
   display: inline-block;
   padding: 10px;
   border-bottom: 1px solid var(--background-color);
@@ -46,7 +46,7 @@ li {
   transition: transform 0.2s ease-in-out;
 }
 
-li:hover {
+nav li:hover {
   transform: translateY(-5px);
 }
 
@@ -80,8 +80,8 @@ button:hover {
   margin: auto;
   margin-top: 70px;
   border-bottom: 1px solid #515665;
-  padding-bottom: 70px;
-  margin-bottom: 40px;
+  padding-bottom: 120px;
+  padding-top: 40px;
 }
 .top-p {
   color: var(--primary-color);
@@ -136,17 +136,59 @@ a:active {
 }
 
 .icons-container {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
-  left: 60px;
+  right: 60px;
 }
 
 .icons-container img {
   width: 25px;
-  margin: 10px 0;
+  margin: 15px 0;
   transition: transform 0.2s ease-in-out;
 }
 
 .icons-container img:hover {
   transform: translateY(-3px);
+}
+
+.vertical-line {
+  border-right: 1px solid #515665;
+  height: 120px;
+  width: 50%;
+}
+
+.work-container {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: "date duties";
+  margin-top: 40px;
+}
+h2 {
+  color: var(--font-color);
+}
+
+.name-date {
+  grid-area: date;
+}
+.work-duties {
+  grid-area: duties;
+}
+
+.work-duties li {
+  margin-bottom: 10px;
+  color: var(--font-color);
+  font-family: Calibre, Inter, "San Francisco";
+  line-height: 1.7;
+}
+ol {
+  list-style: none;
+}
+
+hr {
+  width: 300px;
+  margin: auto;
+  margin-top: 30px;
+  border: 1px solid #515665;
 }
