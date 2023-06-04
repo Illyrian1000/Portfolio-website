@@ -366,8 +366,13 @@ hr {
   }
 
   #description-container {
-    padding: 0 4% 0 5%;
+    padding: 0 0 0 5%;
     height: 700px;
+  }
+
+  #description-container h2 {
+    padding-right: 5%;
+    padding-bottom: 15px;
   }
 
   .description-text {
