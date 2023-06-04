@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  /* border: 1px solid red; */
 }
 
 :root {
@@ -27,7 +26,6 @@ nav {
 
 #logo {
   position: absolute;
-  width: 20px;
   left: 100px;
   top: 35px;
   color: var(--primary-color);
@@ -79,8 +77,9 @@ button:hover {
   width: 60%;
   margin: auto;
   margin-top: 70px;
-  padding-bottom: 120px;
-  padding-top: 40px;
+  height: max-content;
+  gap: 40px;
+  align-items: center;
 }
 .top-p {
   color: var(--primary-color);
@@ -104,7 +103,6 @@ h1 {
   line-height: 1.8;
 }
 
-p,
 h1::selection {
   color: var(--primary-color);
 }
@@ -118,6 +116,7 @@ h1::selection {
 .about-text {
   color: #adb3c7;
   line-height: 1.5;
+  width: 60%;
 }
 
 a,
@@ -132,13 +131,13 @@ a:active {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin-right: 70px;
 }
 
 .icons-container {
   position: absolute;
-  bottom: 20px;
-  right: 60px;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .icons-container img {
@@ -157,14 +156,6 @@ a:active {
   width: 50%;
 }
 
-.work-container {
-  width: 60%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-areas: "date duties";
-  margin-top: 40px;
-}
 h2 {
   color: var(--font-color);
 }
@@ -200,7 +191,6 @@ hr {
   margin: auto;
   margin-bottom: 200px;
   margin-top: 140px;
-  height: !important 500px;
 }
 
 #jobs {
@@ -224,6 +214,16 @@ hr {
   color: var(--primary-color);
 }
 
+.work-date {
+  color: var(--primary-color);
+}
+
+.description-text {
+  color: var(--font-color);
+  line-height: 25px;
+  width: 80%;
+}
+
 #experience-container {
   height: 100%;
 }
@@ -236,6 +236,7 @@ hr {
 }
 #description-container {
   margin-left: 15px;
+  height: 30vh;
 }
 
 #description-container a {
@@ -249,8 +250,6 @@ hr {
   margin-bottom: 10px;
 }
 
-/* TODO active and visible lists */
-
 .hide {
   display: none;
 }
@@ -261,4 +260,121 @@ hr {
   font-weight: bold;
   color: var(--primary-color);
   margin-left: -1;
+}
+
+@media (max-width: 400px) {
+  * {
+    width: unset;
+  }
+
+  nav {
+    all: unset;
+    display: flex;
+    justify-content: right;
+    padding: 40px 40px 0 0;
+    color: var(--font-color);
+    align-items: center;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  .icons-container {
+    all: unset;
+    display: flex;
+    justify-content: right;
+    padding: 20px 30px 0 0;
+  }
+
+  .icons {
+    display: flex;
+    gap: 5px;
+  }
+
+  .icons a {
+    padding: 5px 10px;
+  }
+
+  .icons-container img {
+    width: 25px;
+    margin: 0;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .icons {
+    display: flex;
+  }
+  .vertical-line {
+    display: none;
+  }
+
+  .main-container {
+    width: unset;
+    margin: 20px 5% 70px 10%;
+  }
+
+  .top-p {
+    font-size: 20px;
+  }
+
+  .main-container h1 {
+    font-size: 4rem;
+  }
+
+  .main-p {
+    width: unset;
+  }
+  #about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: unset;
+    margin: 0 0 70px 0;
+    padding: 5% 5% 5% 10%;
+    height: unset;
+    gap: unset;
+    align-items: center;
+    gap: 20px;
+    background-color: #182436c5;
+  }
+
+  #profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+
+  .about-text {
+    width: unset;
+  }
+
+  #experience-container {
+    display: unset;
+    width: unset;
+    margin: 0;
+  }
+
+  #jobs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    line-height: 30px;
+    vertical-align: middle;
+  }
+
+  #jobs p {
+    padding: 5px 0 4px 20px;
+  }
+
+  #description-container {
+    padding: 0 4% 0 5%;
+    height: 700px;
+  }
+
+  .description-text {
+    font-size: 16px;
+  }
+
+  #logo {
+    display: none;
+  }
 }

@@ -1,7 +1,6 @@
 const logo = document.querySelector(`#logo`);
 
-const nameLetters = ["I", "L", "I", "R", "J", "A", "N"];
-const surnameLetters = ["P", "R", "E", "V", "A", "Z", "I"];
+const nameLetters = ["W", "e", "b", "-", "D", "e", "v"];
 
 const random = Math.floor(Math.random() * 2);
 
@@ -61,19 +60,3 @@ fiveca.addEventListener("click", function () {
   publer.classList.remove("active");
   publerDex.classList.add("hide");
 });
-//
-//
-//
-//
-
-// const logoLetterChange = function () {
-//   let i = 0;
-//   setInterval(function () {
-//     console.log(`interval`);
-//     logo.textContent = nameLetters[i];
-//     i++;
-//     if (i === nameLetters.length) {
-//       i = 0;
-//     }
-//   }, 200);
-// };
