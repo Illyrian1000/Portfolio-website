@@ -258,7 +258,7 @@ hr {
   margin-left: -1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   * {
     width: unset;
   }
@@ -365,15 +365,21 @@ hr {
   }
 
   .work {
-    background-color: #192c477e;
+    color: var(--font-color);
+    width: 100;
+    padding-left: 20px;
+    border-left: unset;
+    border-bottom: 1px solid gray;
+    transition: border 0.5s ease, background-color 0.5s ease,
+      font-weight 0.2s ease;
   }
 
   .active {
-    border-left: 2px solid var(--primary-color);
+    border-left: unset;
+    border-bottom: 1px solid var(--primary-color);
     background-color: #192c47;
     font-weight: bold;
     color: var(--primary-color);
-    margin-left: -1;
   }
 
   #description-container {
