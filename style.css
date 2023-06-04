@@ -224,10 +224,6 @@ hr {
   width: 80%;
 }
 
-#experience-container {
-  height: 100%;
-}
-
 #experience-container ol {
   margin-left: 20px;
   vertical-align: middle;
@@ -262,7 +258,7 @@ hr {
   margin-left: -1;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   * {
     width: unset;
   }
@@ -331,7 +327,7 @@ hr {
     justify-content: center;
     width: unset;
     margin: 0 0 70px 0;
-    padding: 5% 5% 5% 10%;
+    padding: 10%;
     height: unset;
     gap: unset;
     align-items: center;
@@ -361,22 +357,39 @@ hr {
     vertical-align: middle;
   }
 
+  #jobs {
+    padding: 0 10% 0 10%;
+  }
   #jobs p {
     padding: 5px 0 4px 20px;
   }
 
-  #description-container {
-    padding: 0 0 0 5%;
-    height: 700px;
+  .work {
+    background-color: #192c477e;
   }
 
-  #description-container h2 {
-    padding-right: 5%;
-    padding-bottom: 15px;
+  .active {
+    border-left: 2px solid var(--primary-color);
+    background-color: #192c47;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-left: -1;
+  }
+
+  #description-container {
+    padding: 0 10% 0 10%;
+    height: 500px;
+    margin: unset;
+  }
+
+  #description-container p {
+    margin: unset;
+    padding: 15px 0 0 0;
   }
 
   .description-text {
     font-size: 16px;
+    width: unset;
   }
 
   #logo {
