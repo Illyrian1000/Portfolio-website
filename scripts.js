@@ -1,4 +1,26 @@
 const logo = document.querySelector(`#logo`);
+const comingSoon = document.getElementById("comingSoon");
+const projects = document.querySelector(".top-link");
+
+let opacity = 1;
+let intervalId;
+
+projects.addEventListener("click", startFadeOut);
+
+function startFadeOut() {
+  opacity = 1;
+  comingSoon.style.opacity = opacity;
+  intervalId = setInterval(reduceOpacity, 50);
+}
+
+function reduceOpacity() {
+  if (opacity > 0) {
+    opacity -= 0.03;
+    comingSoon.style.opacity = opacity;
+  } else {
+    clearInterval(intervalId);
+  }
+}
 
 const nameLetters = ["W", "e", "b", "-", "D", "e", "v"];
 
